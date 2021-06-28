@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lottery_result_item_width">85dp</dimen>
+    <dimen name="lottery_result_item_height">110dp</dimen>
+    <dimen name="lottery_result_item_image_width">50dp</dimen>
+    <dimen name="lottery_result_item_image_height">62dp</dimen>
+</resources>

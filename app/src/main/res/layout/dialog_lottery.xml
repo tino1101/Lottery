@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/turn_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_back_bg" />
+
+    <RelativeLayout
+        android:id="@+id/result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/lottery_result_bg"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:visibility="gone">
+
+        <HorizontalScrollView
+            android:id="@+id/result_scroll_view"
+            android:layout_width="@dimen/lottery_result_item_width"
+            android:layout_height="@dimen/lottery_result_item_height"
+            android:layout_below="@+id/lottery_result_title_view"
+            android:layout_centerHorizontal="true"
+            android:fadingEdge="none"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/result_container_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" />
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/lottery_result_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="恭喜你获得"
+            android:textColor="#F2E5FF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/coin_count_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sure_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:gravity="center_horizontal"
+            android:text="恭喜你获得112学币"
+            android:textColor="#C39EE7"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/sure_view"
+            android:layout_width="127dp"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/lottery_result_sure_bg"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/result_anim_view"
+        layout="@layout/lottery_result_item_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
